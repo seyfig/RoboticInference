@@ -1,0 +1,27 @@
+{
+    "caffe flavor": "NVIDIA",
+    "caffe version": "0.15.14",
+    "creation time": "2018-07-16 21:37:53.545982",
+    "dataset_id": "20180716-213048-a83f",
+    "deploy file": "deploy.prototxt",
+    "digits version": "6.1.1",
+    "framework": "caffe",
+    "id": "20180716-213753-43b8",
+    "image dimensions": [
+        28,
+        28,
+        1
+    ],
+    "image resize mode": "squash",
+    "job id": "20180716-213753-43b8",
+    "labels file": "labels.txt",
+    "mean file": "mean.binaryproto",
+    "mean subtraction": "image",
+    "model file": "original.prototxt",
+    "name": "Tsign28GLeNet",
+    "snapshot file": "snapshot_iter_13800.caffemodel",
+    "solver file": "solver.prototxt",
+    "status": "Done",
+    "train_val file": "train_val.prototxt",
+    "username": "seyfi"
+}

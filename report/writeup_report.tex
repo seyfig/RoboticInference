@@ -22,15 +22,7 @@
 \IEEEtitleabstractindextext{%
 
 \begin{abstract}
-Deep Learning is widely used in object classification. Convolutional Neural Networks improved the success of the computers on object detection, recognition and classification. They are widely used in Self-Driving Cars, robotics and bla bla 
-There exist models such as LeNet, AlexNet, and GoogleNet. Nvidia Digits provides a web interface to utilize these models and create other models.  It is possible to upload data and test it with these models. This project includes to different classification tasks on image datasets. 
-
-TODO DELETE
-In this project, the aim is to train a Deep Neural Network to classify the images of different objects. Nvidia Digits is the main tool for the project. 
-
-An abstract is meant to be a summary of all of the relevant points in your presented work. It is designed to present a high-level overview of the report, providing just enough detail to convey the necessary information The abstract may often mention a one-sentence summary of the results.  While the type of voice chosen for the paper (active or passive) may be up for debate, you should avoid the use of “I” and “me” in the report. It usually is kept to a length of 150 - 200 words. 
-Example: You should not write, “I present two different neural networks for classifying my data”. Instead, you should try to say, “Two different neural networks are used for classification”.
-TODO DELETE
+Deep Learning is widely used in object classification. Convolutional Neural Networks improved the success of the computers on object detection, recognition, and classification. They are commonly used in Self-Driving Cars, robotics and other fields of machine learning. There exist models such as LeNet, AlexNet, and GoogleNet. Nvidia Digits provides a web interface to utilize these models and create other models.  It is possible to upload data and test it with these models. This project includes different classification tasks on image datasets. 
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -45,104 +37,32 @@ Robot, IEEEtran, Udacity, \LaTeX, Deep Learning, Convolutional Neural Networks, 
 \section{Introduction}
 \label{sec:introduction}
 
-\IEEEPARstart{T}{he} goal in this project is to utilize Nvidia Digits application to perform classification on image datasets. There are two datasets. The first one is the provided data that contains bottle and candy box images. Besides, there exists image that do not contain any. 
-
-TODO The second dataset.
-
-Nvidia Digits provide an interface to load the data, create a new model or utilize predefined models. In addition, it enables to customize the models and select hyper parameters. During training, it saves the model on every epoch. This saved models can be used as pretrained models to train more.
-
-
-% TODO DELETE
-% introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and setting up the conversation for the solution you have provided
-% Use this space to introduce your robotic inference idea and how you wish to apply it. 
-% If you have any papers / sites you have referenced for your idea, please make sure to cite them.
-
-% %example for inserting image
-% \begin{figure}[thpb]
-%       \centering
-%       \includegraphics[width=\linewidth]{RobotRevolution5}
-%       \caption{Robot Revolution.}
-%       \label{fig:robot1}
-% \end{figure}
-
-% \subsection{Subsection Heading Here}
-% Subsection text here.
-
-% \subsubsection{Subsubsection Heading Here}
-% Subsubsection text here.
-
-
-% \begin{table}[h]
-% \caption{Table}
-% \label{table_example}
-% \begin{center}
-% \begin{tabular}{|c||c|}
-% \hline
-% One & Two\\
-% \hline
-% Three & Four\\
-% \hline
-% \end{tabular}
-% \end{center}
-% \end{table}
-% TODO DELETE
-
-
-   
+\IEEEPARstart{T}{he} goal in this project is to utilize Nvidia Digits application to perform classification on image datasets. There are two datasets. The first one is the provided data that contains bottle and candy box images. Besides, there exist samples that do not include any.\\
+The second dataset was The German Traffic Sign dataset\cite{tsign}. There are 43 different traffic signs. This dataset was selected because it is related with self-driving field and it has many different classes.\\
+Nvidia Digits provide an interface to load the data, create a new model or utilize predefined models. Besides, it enables to customize the models and select hyperparameters. During training, it saves the model on every epoch. This saved models can be used as pretrained models to train more.
 
 \section{Background / Formulation}
-The problem is to classify objects using Deep Learning. Convolutional neural networks are a good choise\cite{wiki:cnn}. Backpropagation provided enhanced learning for Multilayer Neural Networks.
-
-\subsection{LeNet}
-LeCun et al., 1998 developed LeNet to classify digits in 1998\cite{lenet}. LeNet is a seven level CNN.
-
-\subsection{AlexNet}
-AlexNet\cite{AlexNet}
-
-\subsection{GoogleNet}
-GoogleNet\cite{gnet}
+The problem is to classify objects using Deep Learning. Convolutional neural networks are an excellent choice \cite{wiki:cnn}. Backpropagation provided enhanced learning for Multilayer Neural Networks.\\
+LeCun et al. developed LeNet to classify digits in 1998\cite{lenet}. LeNet was a seven-layer CNN. Krizhevsky et al. built a convolutional neural network which has sixty million parameters, half million neurons and five convolutional layers in 2012 \cite{AlexNet}. Szegedy et al. trained another deep neural network in 2014 which has 22 layers \cite{gnet}.
 
 \subsection{Task 1: Bottle vs Candy-Box}
-In the first task, AlexNet and GoogleNet were selected to classify the samples of bottles and candy-boxes. The reason for selecting AlexNet is its speed, and the reason for selecting the GoogleNet was its higher accuracy. Five different models trained during completing this task. Since adam and RMSprop helps the gradient descent to reach the minima faster, these solver types were allied with AlexNet and GoogleNet. Besides the Stochastic Gradient Descent were selected with AlexNet as the default option. Learning rate 0.01 was a reasonable choise to prevent overfitting and overshooting. The image sizes were compatible with AlexNet and GoogleNet, therefore there were no changes on sizes. Different number of epochs were tried. The results section discuss the details of the models tried and the outcomes.
+In the first task, AlexNet and GoogleNet were selected to classify the samples of bottles and candy-boxes. The reason for choosing AlexNet is its speed, and the reason for working with the GoogleNet was its higher accuracy. Five different models trained while completing this task. Since adam and RMSprop help the gradient descent to reach the minima faster, these solver types were allied with AlexNet and GoogleNet. Besides the Stochastic Gradient Descent were selected with AlexNet as the default option. Learning rate 0.01 was a reasonable choice to prevent overfitting and from overshooting. The image sizes were compatible with AlexNet and GoogleNet. Therefore there were no changes in dimensions. The number of epochs parameter has different values to experiment. The results section discuss the details of the models tried and the outcomes.
 
-
-% TODO DELETE
-% LeNet
-% AlexNet
-% GoogleNet
-% SGD, adam, RMSprop
-% TODO DELETE
-
-\subsection{Task 2: TODO}
-
-% TODO DELETE
-% At this stage, you should begin diving into the technical details of your approach by explaining to the reader how parameters were defined, what type of network was chosen, and the reasons these items were performed. This should be factual and authoritative, meaning you should not use language such as “I think this will work” or “Maybe a network with this architecture is better..”. Instead, focus on items similar to, ”A 3-layer network architecture was chosen with X, Y, and Z parameters” 
-% Explain why you chose the network you did for the supplied data set and then why you chose the network used for your robotic inference project.
-
-% %example for Bullet point list
-
-% \begin{itemize}
-% \item example
-% \end {itemize}
-
-
-
-% %example for numbered list
-% \begin{enumerate}
-% \item example
-
-% \end{enumerate}
-% TODO DELETE
-
+\subsection{Task 2: Traffic Sign}
+The selected dataset has 39,209 images in 43 classes for training. Besides, there are 12,530 images to test. The image size is varying between 15x15 and 250x250 pixels. This situation forced the use of LeNet. All samples were resized by squashing to 28x28 during loading. Enlarging the images would result in excessive training. From the experience from the first task, the solver type was selected as stochastic gradient descent. The learning rate was again 0.01 since it provided satisfying results in the previous part of the project.
 
 \section{Data Acquisition}
 The first task does not contain any changes on the data, since the models were compatible with image size of 256x256.
 
-TODO SECOND TASK
 
-This section should discuss the data set. Items to include are the number of images, size of the images, the types of images (RGB, Grayscale, etc.), how these images were collected (including the method). Providing this information is critical if anyone would like to replicate your results. After all, the intent of reports such as these are to convey information and build upon ideas so you want to ensure others can validate your process.
-Justifying why you gathered data in this way is a helpful point, but sometimes this may be omitted here if the problem has been stated clearly in the introduction.
-It is a great idea here to have at least one or two images showing what your data looks like for the reader to visualize.
+The second task works on the traffic signs data. The main reasons are to select a dataset related to autonomous vehicles and to select a dataset with many classes. A problem with the dataset was, it had varying image sizes, and these sizes were small to use AlexNet or GoogleNet. Therefore, the LeNet model was the remaining choice for this part of the project. Since LeNet takes input grayscales images with size 28x28, all images in the dataset were resized to 28x28 and converted to grayscale. Nvidia Digits automatically performed these operations during loading the data. The number of epochs was selected as ten to prevent overfitting.\\
+Figure~\ref{fig:tss14} shows samples from 14 different classes.
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{figures/Tsignsamples14.png}
+      \caption{Samples From 14 Different Classes}
+      \label{fig:tss14}
+\end{figure}
 
 \section{Results}
 \subsection{Task 1: Bottle vs Candy-Box}
@@ -173,9 +93,8 @@ No. & Model & Epoc & Solver & Rate & Accuracy \\
 4* GoogleNetE6 started from the Epoch 6 of model 3.GoogleNet
 \end{table}
 
-Figures~\ref{fig:t1a2c} shows the screenshot of the console when evaluating the AlexNet2 model for Task1.
+Figure~\ref{fig:t1a2c} shows the screenshot of the console when evaluating the AlexNet2 model for Task1.
 
-TODO ADD FIGURES
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=\linewidth]{figures/t1a2c.png}
@@ -183,7 +102,7 @@ TODO ADD FIGURES
       \label{fig:t1a2c}
 \end{figure}
 
-Figures~\ref{fig:t1a2g} shows the training graph of successful AlexNet2 model. Figures~\ref{fig:t1a2l}, Figures~\ref{fig:t1a2t1}, Figures~\ref{fig:t1a2t2}, and Figures~\ref{fig:t1a2t3} shows the classification results of testing AlexNet2.
+Figure~\ref{fig:t1a2g} shows the training graph of successful AlexNet2 model. Figure~\ref{fig:t1a2l}, Figure~\ref{fig:t1a2t1}, Figure~\ref{fig:t1a2t2}, and Figure~\ref{fig:t1a2t3} shows the classification results of testing AlexNet2.
 
 \begin{figure}[thpb]
       \centering
@@ -225,7 +144,7 @@ Figures~\ref{fig:t1a2g} shows the training graph of successful AlexNet2 model. F
 
 
 
-Figures~\ref{fig:t1a1g} shows the training graph of unsuccessful AlexNet1 model. The accuracy graph shows that the highest accuracy was obtained at epoch 17.
+Figure~\ref{fig:t1a1g} shows the training graph of unsuccessful AlexNet1 model. The accuracy graph shows that the highest accuracy was obtained at epoch 17.
 
 \begin{figure}[thpb]
       \centering
@@ -234,23 +153,63 @@ Figures~\ref{fig:t1a1g} shows the training graph of unsuccessful AlexNet1 model.
       \label{fig:t1a1g}
 \end{figure}
 
+\subsection{Task 2: Traffic Sign}
+Figure ~\ref{fig:t2g} show the training graph of the LeNet for the second task. It can be seen from the graph that, the accuracy did not change significantly after ten epochs. The validation accuracy at tenth epoch was 98.7276\% and for the thirtieth epoch 98.7581\%. The highest accuracy was 98.7785\% for the nineteenth epoch. 
 
-TODO SECOND SECTION
-\subsection{Task 1: Bottle vs Candy-Box}
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{figures/t2g.png}
+      \caption{Training Graph of Task 2 LeNet}
+      \label{fig:t2g}
+\end{figure}
 
-This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If you results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. 
-Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time
-For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
+Figure ~\ref{fig:t2tnpc} shows the top 9 predictions for category. Figure ~\ref{fig:t2t1}, Figure ~\ref{fig:t2t2}, and Figure ~\ref{fig:t2t3} shows sample difficult predictions.
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{figures/TopNperCat.png}
+      \caption{Top 9 Predictions per Category}
+      \label{fig:t2tnpc}
+\end{figure}
+
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{figures/t2t1.png}
+      \caption{Traffic Sign Test 1}
+      \label{fig:t2t1}
+\end{figure}
+
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{figures/t2t2.png}
+      \caption{Traffic Sign Test 2}
+      \label{fig:t2t2}
+\end{figure}
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{figures/t2t3.png}
+      \caption{Traffic Sign Test 3}
+      \label{fig:t2t3}
+\end{figure}
 
 \section{Discussion}
-The graph ... shows that SGD worked better on the dataset. 
+The Figure ~\ref{fig:t1a1g} and Figure ~\ref{fig:t1a2g} show that SGD worked better on both the validation dataset and the test dataset for the Task 1. The GoogleNet was not successful for this dataset. The reason was the use of Adam optimizer instead of SGD and the small number of epochs. It is required to either increase the number of epochs or select the SGD optimizer.\\
 
-This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoid with the use of the word “one”. As an example: instead of : “I think the accuracy on my dataset is low because the images are too small to show the necessary detail” try: “one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail”. They say the same thing, but the second avoids the first person. 
-Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
+For the second task, due to time and hardware limitations, the available datasets were limited. Most of the datasets for autonomous driving have larger than 10 GB data sizes. The Traffic Sign Classification is an old problem, and there are already excellent results. In addition, the size of the images in the dataset made use of AlexNet or GoogleNet irrational. Besides, the LeNet already provide satisfactory results.
 
 \section{Conclusion / Future work}
-This section is intended to summarize your report. Your summary should include a recap of the results, did this project achieve what you attempted, and is this a commercially viable product? 
-For Future work,address areas of work that you may not have addressed in your report as possible next steps. For future work, this could be due to time constraints, lack of currently developed methods / technology, and areas of application outside of your current implementation. Again, avoid the use of the first-person.
+The results of the first task are open for improvement. A deeper network or optimized hyperparameters may provide better accuracy. Due to time limitations, this remains as future work.\\
+
+For the second part of the project, it is required to access an environment which has more than 10 GB disk space and a GPU with more than 4 GB memory. As a future work, deeper networks will be trained for more complex datasets such as vehicle and pedestrian detection.\\
+
+Testing the trained networks on a Jetson TX2 is another waiting task.
+
+\subsection{Hardware Deployment}
+The first part of the project was deployed on Udacity Workspace. Udacity Workspace provides a powerful GPU, which offers fast training and enough memory to train large deep networks.
+The second part of the project was deployed in the local installation of Nvidia Digits. The machine has an I7 CPU, 8GB RAM, and 650M GPU. The configuration was able to train LeNet, and with more powerful CPU and GPU, it will be possible to increase the complexity of the network. 
 
 \bibliography{bib}
 \bibliographystyle{ieeetr}
