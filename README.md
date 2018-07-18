@@ -23,7 +23,7 @@
 
 ## Task 1
 
-The model downloaded from Nvidia Digits is placed in the model1 folder. However, the caffemodel file has a size greater than 200 MB, and it can be reached from [Google Drive](https://drive.google.com/file/d/1rs7YTR4xQt15cp18qqH0fzl7u0p4P_eU/view?usp=sharing) under the [Models Folder](https://drive.google.com/drive/folders/1GteEAUfTZKFF0tSW00lu--gEw1EazRRM?usp=sharing).
+The model downloaded from Nvidia Digits is placed in the model1 folder.
 
 Screenshot of Task 1 AlexNet2  
 
